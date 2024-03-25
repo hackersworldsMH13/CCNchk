@@ -22,7 +22,7 @@ ano = "2026"
 cvv = "589"
 
 
-def adyen_bh(cc, mes, ano, cvv):
+def main(cc, mes, ano, cvv):
     r = requests.Session()
     # r.proxies = {"http": proxy_info, "https": proxy_info}
     user_add = RandUser().rand_user()
@@ -247,7 +247,7 @@ def index():
     if request.method == 'POST':
         input_text = request.form['credit_info']
         cc, mm, yy, cvv = input_text.split('|')
-        result = adyen_bh(cc, mm, yy, cvv)
+        result = main(cc, mm, yy, cvv)
     return render_template('index.html', result=result)
 
 if __name__ == '__main__':
