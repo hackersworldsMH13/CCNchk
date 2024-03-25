@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+</head>
+<body>
+    <h1>Enter Credit Card Information</h1>
+    <form method="post">
+        <label for="credit_info">Enter Credit Card Information (cc|mm|yy|cvv):</label><br>
+        <input type="text" id="credit_info" name="credit_info"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if result %}
+    <h2>Result:</h2>
+    <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
