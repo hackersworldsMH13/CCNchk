@@ -16,11 +16,6 @@ def find_between(data, first, last):
         return
 
 
-cc = "4000222621818451"
-mes = "09"
-ano = "2026"
-cvv = "589"
-
 
 def main(cc, mes, ano, cvv):
     r = requests.Session()
