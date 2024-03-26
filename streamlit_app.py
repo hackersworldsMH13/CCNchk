@@ -252,7 +252,7 @@ def process_payment(cc, mes, ano, cvv):
 
 # Streamlit app definition
 def main():
-    st.title('Credit Card Payment by MH13CYBER')
+    st.title('Cc Checker by MH13CYBER')
     st.write('Credit Card Information (Separated by \'|\'):')
     cc = st.text_input('Credit Card Details')
     if st.button('Process Payment'):
@@ -261,6 +261,7 @@ def main():
             result = process_payment(*cc_info)
             st.write('Payment Result:')
             st.write(result)
+            st.write(https://t.me/mh13cyber2)
         else:
             st.error('Invalid input format. Please separate credit card details using \'|\'.')
         
