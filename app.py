@@ -1,5 +1,11 @@
 from flask import Flask, render_template, request, jsonify
 import requests
+import os
+import streamlit as st
+import uuid
+from streamlit.components.v1 import html, components
+
+
 from userinfo import RandUser  # Assuming this is a custom module you have
 
 # Disable SSL warnings
