@@ -261,7 +261,8 @@ def main():
             result = process_payment(*cc_info)
             st.write('Payment Result:')
             st.write(result)
-            st.write(https://t.me/mh13cyber2)
+            st.write(Join tg:- @mh13cyber2')
+            st.write(Join tg:- @Blackheads')
         else:
             st.error('Invalid input format. Please separate credit card details using \'|\'.')
         
