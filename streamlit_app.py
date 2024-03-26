@@ -167,7 +167,7 @@ def process_payment(cc, mes, ano, cvv):
     encryptedExpiryMonth = adyen_key["encryptedExpiryMonth"]
     encryptedExpiryYear = adyen_key["encryptedExpiryYear"]
     encryptedSecurityCode = adyen_key["encryptedSecurityCode"]
-    riskData, encryptedCardNumber, encryptedExpiryMonth, encryptedSecurityCode
+    # riskData, encryptedCardNumber, encryptedExpiryMonth, encryptedSecurityCode
 
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0",
