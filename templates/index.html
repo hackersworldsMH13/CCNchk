@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Payment</title>
+</head>
+<body>
+    <h1>Credit Card Payment by MH13CYBER </h1>
+    <form action="/" method="post">
+        <label for="credit_info">Credit Card Information (Separated by '|'): </label><br>
+        <input type="text" id="credit_info" name="credit_info" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <div>
+        <h2>Payment Result:</h2>
+        {% if result %}
+            <p>{{ result }}</p>
+        {% endif %}
+    </div>
+    <div>
+        <a href="https://t.me/mh13cyber2">join telegram</a>
+        <hr>
+        <a href="https://www.threads.net/@mh13cyb3r">threads</a>
+        <hr>
+        <a href="https://www.instgram.com/mh13cyb3r">Instgram</a>
+         
+        
+     
+    </div>
+</body>
+</html>
