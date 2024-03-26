@@ -1,5 +1,11 @@
 import streamlit as st
 import logging
+import requests
+from userinfo import RandUser  # Assuming this is a custom module you have
+
+# Disable SSL warnings
+import urllib3
+urllib3.disable_warnings()
 
 def find_between(data, first, last):
     try:
@@ -13,15 +19,13 @@ def find_between(data, first, last):
 def process_payment(cc, mm, yy, cvv):
 
     logger = logging.getLogger(__name__)
-
     logger.info("Starting payment process...")
- 
 
     r = requests.Session()
-    # r.proxies = {"http": proxy_info, "https": proxy_info}
     user_add = RandUser().rand_user()
     r.cookies.clear()
     r.verify = False
+
 
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0",
@@ -246,16 +250,20 @@ def process_payment(cc, mm, yy, cvv):
     result = f"Payment processed successfully for credit card: {cc}"
     return result
 
-# Define Streamlit app
+# Streamlit app definition
 def main():
-    st.title('Payment Processor')
-    cc = st.text_input('Enter credit card number')
-    mm = st.text_input('Enter expiration month')
-    yy = st.text_input('Enter expiration year')
-    cvv = st.text_input('Enter CVV')
+    st.title('Credit Card Payment by MH13CYBER')
+    st.write('Credit Card Information (Separated by \'|\'):')
+    cc = st.text_input('Credit Card Details')
     if st.button('Process Payment'):
-        result = process_payment(cc, mm, yy, cvv)
-        st.write(result)
+        cc_info = cc.split('|')
+        if len(cc_info) == 4:
+            result = process_payment(*cc_info)
+            st.write('Payment Result:')
+            st.write(result)
+        else:
+            st.error('Invalid input format. Please separate credit card details using \'|\'.')
+        
 
 if __name__ == '__main__':
     main()
