@@ -1,4 +1,9 @@
+streamlit==1.25.0
+pedalboard==0.7.5
 Flask==2.0.2
 requests==2.26.0
 urllib3==1.26.8
 Werkzeug==2.2.2
+names==0.3.0
+RandUser==0.0.1
+fastcore==1.5.29
