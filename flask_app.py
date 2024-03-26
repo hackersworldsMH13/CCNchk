@@ -1,6 +1,13 @@
 from flask import Flask, render_template, request
 import requests
 import subprocess
+ 
+from userinfo import RandUser  # Assuming this is a custom module you have
+
+# Disable SSL warnings
+import urllib3
+urllib3.disable_warnings()
+
 
 app = Flask(__name__)
 
