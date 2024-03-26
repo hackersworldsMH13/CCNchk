@@ -24,10 +24,10 @@ def index():
 @app.route('/submit', methods=['POST'])
 def submit():
     # Extract credit card information from the form
-    cc, mm, yy, cvv = request.form['credit_info'].split('|')
+    cc, mes, ano, cvv = request.form['credit_info'].split('|')
     
     # Make a request to Streamlit API
-    response = requests.post('http://localhost:8501/process_payment', json={'cc': cc, 'mm': mm, 'yy': yy, 'cvv': cvv})
+    response = requests.post('http://localhost:8501/process_payment', json={'cc': cc, 'mes': mes, 'ano': ano, 'cvv': cvv})
     
     # Get the result from Streamlit
     result = response.json()['result']
