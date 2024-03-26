@@ -256,4 +256,5 @@ def index():
         cc, mm, yy, cvv = input_text.split('|')
         _, result = main(cc, mm, yy, cvv)
     return render_template('index.html', result=result)
-
+if __name__ == '__main__':
+    app.run(debug=True)
